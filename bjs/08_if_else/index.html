@@ -5,25 +5,26 @@
     <title>Угадайка</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
 <div class="container">
     <div class="row game-card align-items-center">
-        <div class="col col-md-4 offset-md-4">
+        <div class="col col-md-4 offset-md-4">         
             <div class="card text-center">
-                <div class="card-header">
+                <div class="card-header collapseToggle show collapse">
                     <p class="m-0">Вопрос №<span id="orderNumberField">5</span></p>
                 </div>
-                <div class="card-body">
+                <div class="card-body collapseToggle show collapse">
                     <div class="row no-gutters">
                         <div class="col">
                             <h3 class="card-title m-0"><span id="answerField">Вы загадали число 5?</span></h3>
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body collapseToggle show collapse">
                     <div class="btn-group">
                         <button class="btn btn-info" id="btnLess">&#129047;<br>меньше</button>
                         <button class="btn btn-success btn-lg" id="btnEqual">Верно!</button>
@@ -31,7 +32,29 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-link" id="btnRetry">Заново</button>
+
+                    <p>
+                        <button class="btn btn-primary" id="newGame" type="button" data-bs-toggle="collapse" data-bs-target=".collapseToggle" aria-expanded="false" aria-controls="collapseExample">
+                          Новая игра
+                        </button>
+                      </p>
+                      <div class="collapse collapseToggle" id="collapseExample">
+                        <div class="card card-body">
+                            <form action="#" class="form-group">
+                                <label>
+                                    Минимальное знание числа для игры<br>
+                                    <input type="text" class="form-control" id="minValue" placeholder="Введите число от -999">
+                                </label>
+                                <label>
+                                    Максимальное знание числа для игры<br>
+                                    <input type="text" class="form-control" id="maxValue" placeholder="Введите число до 999">
+                                </label>
+                                <p>Загадайте любое целое число от <span id="min"></span> до <span id="max"></span></p>
+                                <button class="btn btn-link" id="btnRetry" data-bs-toggle="collapse" data-bs-target=".collapseToggle" aria-expanded="false" aria-controls="collapseExample">Начать игру</button>
+                            </form>
+                        </div>
+                      </div>
+
                 </div>
             </div>
         </div>
