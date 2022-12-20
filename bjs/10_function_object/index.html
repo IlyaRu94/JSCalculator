@@ -14,18 +14,19 @@
         <div class="col col-md-6 offset-md-3">
             <div class="card text-center">
                 <div class="card-header">
-                    <p class="m-0">Окно результатов генерации</p>
+                    <p class="m-0">Генератор случайных пользователей</p>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <h3 class="card-title"><span id="surnameOutput">Генерация фамилии</span></h3>
-                            <h4>Имя: <span id="firstNameOutput">Иван</span></h4>
+                            <h2 class="card-title"><span id="surnameOutput">Фамилия</span></h2>
+                            <h3><span id="firstNameOutput">Имя</span> <span id="patronymicOutput">Отчество</span></h3>
+                            <h4><span id="professionOutput">Профессия</span></h4>
                             <p>
-                                <span id="genderOutput">Генерация пола</span>
-                                <span>, </span>
-                                <span id="birthYearOutput">Генерация года рождения</span>
+                                <span id="genderOutput">Пол</span><span>, </span>
+                                <br><span id="dateOutput">День рождения</span> <span id="monthOutput">Месяц рождения</span> <span id="birthYearOutput">Год рождения</span>
                             </p>
+                            <button class="btn btn-primary" id="generatePerson">Генерировать</button> <button class="btn btn-danger" id="clearPerson">Сброс</button>
                         </div>
                     </div>
                 </div>

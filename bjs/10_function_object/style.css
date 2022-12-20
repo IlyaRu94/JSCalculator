@@ -1,0 +1,23 @@
+html{
+    height: 100%;
+}
+body{
+        background: url(person.png) no-repeat center;
+        background-size: cover;
+        height: 100%;
+}
+h4 {
+    color: #007bff;
+    font-style: italic;
+    font-family:Georgia, serif;
+}
+h2{
+    font-family:'Arial Black', Gadget, sans-serif;
+}
+h3{
+    font-family:'Times New Roman', Times, serif;
+}
+#dateOutput, #monthOutput, #birthYearOutput{
+    font-family:Verdana, Geneva, sans-serif;
+    font-style: italic;
+}
